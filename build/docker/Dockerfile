@@ -1,6 +1,6 @@
 ARG arch=arm32v7
 ARG arch_qemu=arm
-ARG release=bullseye
+ARG release=buster
 FROM --platform=linux/amd64 debian:${release}-slim AS qemu
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends qemu-user-static
